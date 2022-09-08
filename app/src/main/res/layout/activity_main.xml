@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/activity_main_background"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/l_n_cl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/l_n_mb_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_back_white"
+            app:iconTint="@color/white"
+            android:background="@android:color/transparent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/l_n_mb_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_menu"
+            app:iconTint="@color/white"
+            android:background="@android:color/transparent"
+            app:iconGravity="textStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/wrapAndWhite"
+            android:text="@string/l_n_mtv_heading"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/l_n_mb_menu"
+            app:layout_constraintBottom_toBottomOf="@id/l_n_mb_menu"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/l_n_mtv_ready"
+            style="@style/wrapAndWhite"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24sp"
+            android:text="@string/ready_to_get_started"
+            android:textSize="38sp"
+
+            app:layout_constraintStart_toStartOf="@id/l_n_mb_back"
+            app:layout_constraintTop_toBottomOf="@id/l_n_mb_back" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/wrapAndWhite"
+            android:layout_marginTop="28dp"
+            android:text="@string/instructions"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/l_n_mtv_ready"
+            app:layout_constraintTop_toBottomOf="@id/l_n_mtv_ready" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/l_n_rw"
+        android:layout_marginTop="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:listitem="@layout/rw_for_loyal_nfst"
+        android:layout_gravity="center" />
+
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/iconButton"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/button"
+        android:text="Go to marketplace"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+
+
+
+</LinearLayout>
